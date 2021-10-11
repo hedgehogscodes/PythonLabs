@@ -3,6 +3,8 @@ n = ''
 r=0
 a=0
 b=0
+P=0
+rm=0
 Quit = False
 while Quit != True:
     print("\n-----------------Меню-----------------")
@@ -64,7 +66,7 @@ while Quit != True:
          except ValueError:
                  pass  
          while rm<=0:
-                print("\nНеверное значение малой полуоси")
+                print("\nНеверное значение радиуса")
                 try:
                     rm=int(input('Введите значение радиуса: '))
                 except ValueError:

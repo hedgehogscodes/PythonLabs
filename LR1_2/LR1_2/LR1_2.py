@@ -5,8 +5,6 @@ n = 0
 res = 0
 st = ""
 exit = False
-countnum = 0
-negativecount = 0
 bib = dict()
 while exit != True:
     print("\n-----------------Меню-----------------")
@@ -35,14 +33,19 @@ while exit != True:
         a.insert(i,str1)
         for j, value in enumerate(a):
             try:
-                 a[j] = int(a[j])
+               cel = float(a[j])
+               cel = int(cel)
+               if float(a[j])%cel == 0:
+                  a[j] = int(a[j])
+               else:
+                  a[j] = float(a[j])
             except ValueError:
-                 pass  
+                       pass  
     elif n==3:
         a.pop()
     elif n==4:
         for j in range(0, len(a)):
-            proverka=a[j].isdigit()
+            proverka=str(a[j]).isdigit()
             if proverka == False:
                 b.append(a[j])
         print('\n')
@@ -59,14 +62,10 @@ while exit != True:
         res = 0
     elif n==6:
         for j in range(0, len(a)):
-            if type(a[j])==int:
-                countnum=countnum+1
-                if a[j]<0:
-                     negativecount=negativecount+1
             st=st+str(a[j])+" "
         print(st)
-        print('Количество букв в строке:', len(st.replace(" ", ""))-countnum-negativecount)
-        countnum = 0
+        cnt = sum([ 1 for s in st if s.isalpha() ])
+        print('Количество букв в строке:', cnt)
         st=""
     elif n==7:
         m1 = set(a)
@@ -79,7 +78,7 @@ while exit != True:
             except ValueError:
                  pass 
             m2.add(vvod)
-            setstop=int(input("Для прододжения заполнения введите 1: "))
+            setstop=int(input("Для продолжения заполнения введите 1: "))
             if setstop == 1:
                 seting = True
             else:
@@ -93,7 +92,7 @@ while exit != True:
         print('Словарь: ', bib)
         print('Элементы словаря с нечетными значениями ключа: ')
         if len(a)>2:
-               for j in range(0, len(a)-2):
+               for j in range(0, int(len(a)/2)):
                      print(2*j+1,':',bib[2*j+1])  
         elif len(a)==2:
              print(bib[1])
