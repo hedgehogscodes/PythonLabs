@@ -45,22 +45,76 @@ while True:
         command = None
         
     if command == 1:
-        animal_code = input('Введите код животного: ')
-        animal_vid = input('Введите вид животного: ')
-        klichka = input('Введите кличку животного: ')
-        okras = input('Введите окрас животного: ')
-        data_birthday = input('Введите дату рождения: ')
-        FIO = input('Введите ФИО хозяина: ')
-        telefon = input('Введите телефон хозяина: ')
-        animals.append(Animal(
-            animal_code = animal_code,
-            animal_vid = animal_vid,
-            klichka = klichka,
-            okras = okras,
-            data_birthday = data_birthday,
-            FIO = FIO,
-            telefon = telefon)
-        )
+        proverka = 1
+        if proverka==1:
+            animal_code = input('Введите код животного: ')
+            proverka = int(input('Продолжить? 1-да 0-нет:'))
+            if proverka==0:
+                animals.append(Animal(
+                animal_code = animal_code)
+             )
+        if proverka==1:
+            animal_vid = input('Введите вид животного: ')
+            proverka = int(input('Продолжить? 1-да 0-нет:'))
+            if proverka==0:
+                animals.append(Animal(
+                animal_code = animal_code,
+                animal_vid = animal_vid)
+             )
+        if proverka==1:
+            klichka = input('Введите кличку животного: ')
+            proverka = int(input('Продолжить? 1-да 0-нет:'))
+            if proverka==0:
+                animals.append(Animal(
+                animal_code = animal_code,
+                animal_vid = animal_vid,
+                klichka = klichka)
+             )
+        if proverka==1:
+            okras = input('Введите окрас животного: ')
+            proverka = int(input('Продолжить? 1-да 0-нет:'))
+            if proverka==0:
+                animals.append(Animal(
+                animal_code = animal_code,
+                animal_vid = animal_vid,
+                klichka = klichka,
+                okras = okras)
+             )
+        if proverka==1:
+            data_birthday = input('Введите дату рождения: ')
+            proverka = int(input('Продолжить? 1-да 0-нет:'))
+            if proverka==0:
+                animals.append(Animal(
+                    animal_code = animal_code,
+                    animal_vid = animal_vid,
+                    klichka = klichka,
+                    okras = okras,
+                    data_birthday = data_birthday)
+                 )
+        if proverka==1:
+            FIO = input('Введите ФИО хозяина: ')
+            proverka = int(input('Продолжить? 1-да 0-нет:'))
+            if proverka==0:
+                animals.append(Animal(
+                    animal_code = animal_code,
+                    animal_vid = animal_vid,
+                    klichka = klichka,
+                    okras = okras,
+                    data_birthday = data_birthday,
+                    FIO = FIO)
+             )
+        if proverka==1:
+            telefon = input('Введите телефон хозяина: ')
+            proverka = int(input('Продолжить? 1-да 0-нет:'))
+            animals.append(Animal(
+                animal_code = animal_code,
+                animal_vid = animal_vid,
+                klichka = klichka,
+                okras = okras,
+                data_birthday = data_birthday,
+                FIO = FIO,
+                telefon = telefon)
+             )
 
     elif command == 2:
         animal_code = input('Введите код удаляемого животного: ')
