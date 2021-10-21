@@ -17,6 +17,6 @@ while True:
            or (x=="M" and mnogoug(y[0], y[1])) or (x=="Q" and exit(y[0], y[1])) or "", list_arg[0], list_arg[1]))
         print(answer)
         exi = lambda: ((True in answer) and exit(0)) or ""
-        print(exi())
+        print(exit())
     except:
         print("Ошибка в данных")
