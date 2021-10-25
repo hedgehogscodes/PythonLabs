@@ -1,0 +1,25 @@
+CREATE TABLE if not exists XOZ (
+  Xozcode varchar(100) PRIMARY KEY,
+  fioxoz varchar(100) NOT NULL,
+  telxoz varchar(100) NOT NULL
+);
+
+CREATE TABLE if not exists Animal(
+  Animalcode varchar(100) PRIMARY KEY,
+  Name varchar(30) NOT NULL,
+  getxozcode varchar(100) NOT NULL,
+  FOREIGN KEY (getxozcode) REFERENCES XOZ(Xozcode)
+);
+
+
+
+SELECT Animal.Animalcode, Name FROM Animal
+left join fioxoz,telxoz on XOZ.Xozid=Animal.getxoz order by Animalcode;
+
+
+Select Animal.Animalcode, Name, xoz.Xozcode, xoz.fioxoz, xoz.telxoz
+from Animal,xoz
+WHERE Animal.getxozcode = xoz.Xozcode
+GROUP BY Animalcode;
+
+DELETE FROM xoz where Xozcode = 'd';

@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>8b3d783e-775c-4c73-ae19-ad7fe8f66726</ProjectGuid>
+    <ProjectGuid>cfb58a5d-0d84-402f-bdcf-7bf97a2b27df</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>L5.py</StartupFile>
+    <StartupFile>L6_CLIENT.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>L5</Name>
-    <RootNamespace>L5</RootNamespace>
+    <Name>L6_CLIENT</Name>
+    <RootNamespace>L6_CLIENT</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="L5.py" />
+    <Compile Include="L6_CLIENT.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
