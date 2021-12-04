@@ -5,6 +5,7 @@ def strcount(text):
     answer = ""
     my_dict = {}
     for k in text:
+        k = k.title()
         if k.isalpha():
             if k in my_dict:
                 my_dict[k]=my_dict[k]+1
